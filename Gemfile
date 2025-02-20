@@ -73,3 +73,6 @@ gem 'sassc-rails'
 gem 'sprockets-rails'
 
 gem 'rubocop', '~> 1.72'
+
+  gem 'bundler-audit', require: false
+
