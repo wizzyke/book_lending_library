@@ -1,0 +1,264 @@
+/* Modern UI Styling */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-bg: #f8f9fa;
+$dark-bg: #343a40;
+$border-radius: 8px;
+
+body{
+    margin: 0px;
+}
+/* Custom Navbar Styling */
+/* Custom Navbar Styling */
+
+  /* Custom Navbar Styling - Reduced Height */
+.custom-navbar {
+    padding: 5px 15px; /* Reduced padding to make it shorter */
+    background-color: grey;
+
+  }
+  
+  /* Ensuring navbar links stay on the right */
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Align title to the left and links to the right */
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Reduce height of navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    color: white;
+    padding: 5px 10px; /* Reduced padding */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .navbar-nav .nav-link:hover {
+    color: #f8d210;
+  }
+  
+  /* Style for buttons */
+  .navbar-nav .btn {
+    font-size: 0.9rem;
+    border-radius: 5px;
+    padding: 4px 10px; /* Reduced button padding */
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      text-align: right;
+    }
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  
+      
+
+/* Footer Styling */
+.footer {
+  background-color: $dark-bg;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+/* Form Styling */
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid $secondary-color;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .card-content {
+    font-size: 1rem;
+    color: $secondary-color;
+  }
+}
+// Entry point for your Sass build
+
+
+/* Container Styling */
+.container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  /* Table Styling */
+  .table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table thead {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+  }
+  
+  .table-striped tbody tr:hover {
+    background-color: #e9ecef;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Badge Styling */
+  .badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Buttons */
+  .btn-sm {
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .table {
+      font-size: 14px;
+    }
+    .btn-sm {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  }
+  
+
+
+  /* General Styling */
+
+  
+  /* Heading */
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background: #343a40;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn-danger {
+    background: #dc3545;
+    color: white;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background: #bb2d3b;
+    transform: scale(1.05);
+  }
+  
+  .btn-secondary {
+    background: #6c757d;
+    color: white;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  
+  .btn-secondary:hover {
+    background: #565e64;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+    }
+    th, td {
+      font-size: 14px;
+    }
+  }
+  

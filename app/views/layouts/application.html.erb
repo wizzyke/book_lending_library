@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Book Lending Library" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+<%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+  <div class="container">
+    <!-- Title on the Left -->
+    <a class="navbar-brand" href="<%= root_path %>">LIBRARY</a>
+
+    <!-- Navbar Toggle for Mobile View -->
+    
+
+    <!-- Navbar Links on the Right -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Books", books_path, class: "nav-link" %>
+        </li>
+
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "My Profile", profile_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-sm ms-2" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success btn-sm ms-2" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+  <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+</html>
