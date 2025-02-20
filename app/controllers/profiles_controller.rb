@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
@@ -5,4 +7,3 @@ class ProfilesController < ApplicationController
     @borrowed_books = current_user.borrowings.includes(:book)
   end
 end
-

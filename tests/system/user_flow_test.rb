@@ -1,4 +1,6 @@
-require "application_system_test_case"
+# frozen_string_literal: true
+
+require 'application_system_test_case'
 
 class UserFlowTest < ApplicationSystemTestCase
   setup do
@@ -7,17 +9,17 @@ class UserFlowTest < ApplicationSystemTestCase
     sign_in @user
   end
 
-  test "user can borrow and return a book" do
+  test 'user can borrow and return a book' do
     visit books_path
     click_on @book.title
-    click_on "Borrow"
+    click_on 'Borrow'
 
-    assert_text "Book borrowed successfully"
+    assert_text 'Book borrowed successfully'
 
     visit profile_path
     assert_text @book.title
-    click_on "Return"
+    click_on 'Return'
 
-    assert_text "Book returned successfully"
+    assert_text 'Book returned successfully'
   end
 end

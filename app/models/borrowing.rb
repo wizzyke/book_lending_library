@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class Borrowing < ApplicationRecord
   belongs_to :user
@@ -15,6 +16,6 @@ class Borrowing < ApplicationRecord
   end
 
   def book_availability
-    errors.add(:book, "is already borrowed") unless book.available
+    errors.add(:book, 'is already borrowed') unless book.available
   end
 end
