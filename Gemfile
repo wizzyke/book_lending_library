@@ -73,3 +73,5 @@ gem 'sprockets-rails'
 gem 'cssbundling-rails'
 gem 'sassc-rails'
 
+
+gem "rubocop", "~> 1.72"
